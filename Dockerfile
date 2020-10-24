@@ -1,5 +1,4 @@
-FROM centos:7
-MAINTAINER DingXiangYuanZhiXing 
+FROM centos:7 
 ENV REFRESHED_AT 2020-10-24
 
 RUN yum install -y python3 libgomp libgfortran5 && yum clean all
