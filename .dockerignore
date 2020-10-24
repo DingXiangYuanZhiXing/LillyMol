@@ -1,0 +1,6 @@
+.git
+make*
+Makefile
+*.sh
+src
+example
