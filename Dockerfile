@@ -1,8 +1,13 @@
 FROM centos:7 
 ENV REFRESHED_AT 2020-10-24
 
+# Install dependencies
 RUN yum install -y python3 libgomp libgfortran5 && yum clean all
+
+# After this soft-link you CAN'T use yum, since yum is written in python2
 RUN ln -sf /usr/bin/python3 /usr/bin/python
+
+# If you can access pypi.org fast enought, you don't can install packages without changing mirror
 RUN python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas scipy --no-cache-dir
 
 COPY . /app
