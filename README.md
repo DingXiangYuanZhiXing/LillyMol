@@ -9,4 +9,5 @@ But you need to install the dependencies in the Dockerfile.
 
 ### Docker Usage
 Just build with command `docker build --rm -t lillymol .`
+
 Run the container with command `docker run -it --rm -w /app/test/ lillymol ./run_all_test.sh` to test the installation.
