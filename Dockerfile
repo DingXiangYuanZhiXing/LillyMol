@@ -8,7 +8,8 @@ RUN yum install -y python3 libgomp libgfortran5 && yum clean all
 RUN ln -sf /usr/bin/python3 /usr/bin/python
 
 # If you can access pypi.org fast enought, you don't can install packages without changing mirror
-RUN python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas scipy --no-cache-dir
+# RUN python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas scipy --no-cache-dir
+RUN python -m pip install pandas scipy --no-cache-dir
 
 COPY . /app
 
